@@ -28,6 +28,10 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.status span {
+color: #f2ebd3;
+}
+
 .reset {
   cursor: pointer;
 }
@@ -59,4 +63,5 @@ font-size: 200px;
 .o::after{
   content: '○';
   font-size: 225px;
+  color: #f2ebd3;
 }
