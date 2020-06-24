@@ -27,6 +27,7 @@ body {
   font-size: 25px;
   display: flex;
   justify-content: space-around;
+  height: 30px; /*to avoid shaking/jittering*/
 }
 .status span {
 color: #f2ebd3;
@@ -56,6 +57,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+.x, 
+.o {
+  cursor: default;
+}
 .x::after{
 content: '×'; 
 font-size: 200px;
@@ -64,4 +69,43 @@ font-size: 200px;
   content: '○';
   font-size: 225px;
   color: #f2ebd3;
+}
+.won {
+  color: #bd022f;
+}
+/*Media QUeries: Tablet/ Phone size*/
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 10px;
+  }
+  .game-cell {
+    height: 150px;
+    width: 150px;
+  }
+  .x::after::after {
+    font-size: 150px;
+  }
+  .o::after {
+    font-size: 175px;
+  }
+}
+
+
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+  .game-cell {
+    height: 100px;
+    width: 100px;
+  }
+  .x::after{
+    font-size: 100px;
+  }
+  .o::after {
+    font-size: 125px;
+  }
 }
